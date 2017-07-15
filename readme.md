@@ -2,8 +2,3 @@ Basic design pattern examples based on a reading of Head First Design Patterns, 
 
 These simple examples are mostly a reference for myself if I want to review what a specific pattern looks like, and are not meant for
 production.
-
-TODO: Revisit the Abstract Factory pattern <br/>
-TODO: Revisit the Decorator pattern <br/>
-TODO: Revisit the Singleton pattern <br/>
-TODO: Create an actual todo.txt
