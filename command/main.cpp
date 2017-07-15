@@ -58,7 +58,7 @@ class Invoker {
 
 
 
-// Any references to a client mean the class that holds the
+// Any references to a client mean the class that holds the invoker
 // In this case, the client is our main() function
 int main() {
     Invoker invoker(make_unique<Command>(make_unique<Receiver>()));
