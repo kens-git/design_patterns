@@ -49,14 +49,12 @@ void AwesomeGame::mainLoop() {
     mCurrentState->draw();
 
     // The user decided to play the game, change to PlayState
-    mCurrentState.reset();
     mCurrentState = make_unique<PlayState>();
 
     mCurrentState->update();
     mCurrentState->draw();
 
     cout << endl << "The user quits..." << endl;
-    mCurrentState.reset();
 }
 
 int main() {
