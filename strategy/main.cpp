@@ -21,7 +21,7 @@ class PowerHitter : public HitBehaviour {
 
 class LeadoffHitter : public HitBehaviour {
     public:
-        void hit() override { cout << "The leadoff hitter hits for average." << endl; }
+        void hit() override { cout << "The speedy hitter hits for average." << endl; }
 };
 
 

@@ -8,7 +8,7 @@ using std::unique_ptr;
 using std::move;
 
 
-
+// In production this would be an abstract base class
 class Receiver {
     public:
         void incrementValue();
@@ -46,16 +46,20 @@ class Command {
 class Invoker {
     public:
         Invoker(unique_ptr<Command> command) { mCommand = move(command); }
-        // Useful, but not implemented for now
-        //void setExecute(unique_ptr<Command> command) { mCommand = move(command); }
-        //void setUndo(unique_ptr<Command> command) { mCommand = move(command); }
+
         void doTheThing() { mCommand->execute(); }
         void undoTheThing() { mCommand->undo(); }
 
     private:
+		// This would usually be a stack or queue, so we could push and pop commands (i.e., executate and undo commands)
         unique_ptr<Command> mCommand;
 };
 
+
+/* Definitions */
+// Invoker: Keeps track of the command stack
+// Command: The specified command
+// Receiver: The object being acted on
 
 
 // Any references to a client mean the class that holds the invoker

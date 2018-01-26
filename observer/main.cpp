@@ -11,8 +11,7 @@ using std::shared_ptr;
 using std::make_shared;
 
 
-
-// In the real world, Subject and Observer would be abstract base classes,
+// In production, Subject and Observer would be abstract base classes,
 // but, for this small example they'll hold the actual implementations.
 class Observer {
     public:
